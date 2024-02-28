@@ -17,7 +17,12 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, ScrollSmoother, useGSAP);
 }
 
-export default function RootLayout({ children }) {
+// React.ReactNode を定義
+type Props ={
+  children: React.ReactNode
+}
+// children に型指定 : Props を追加
+export default function RootLayout({ children }: Props) {
   const pathname = usePathname();
 
   useGSAP(

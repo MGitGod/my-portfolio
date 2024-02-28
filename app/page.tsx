@@ -1,12 +1,13 @@
 'use client';
 
 import { useRef } from 'react';
-import gsap from 'gsap-trial';
+// import gsap from 'gsap-trial';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useGSAP } from '@gsap/react';
 
 const HomePage = () => {
-  const container = useRef();
+  // 明示的な型指定と初期値の設定 <HTMLElement> と null を追加した
+  const container = useRef<HTMLElement>(null);
 
   useGSAP(
     () => {
